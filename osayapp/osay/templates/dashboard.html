@@ -1,0 +1,12 @@
+<!-- templates/dashboard.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Dashboard</h1>
+<p>Welcome, {{ user.username }}!</p>
+<p>Email: {{ user.email }}</p>
+<p>Bio: {{ user.profile.bio }}</p> <!-- Assuming 'bio' is a field on a related 'Profile' model -->
+
+<!-- Add logout link -->
+<a href="{% url 'logout' %}">Logout</a>
+{% endblock %}
